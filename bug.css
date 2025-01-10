@@ -1,0 +1,9 @@
+The following CSS rule causes unexpected behavior in some browsers:
+
+```css
+div {
+  width: calc(100% - 20px);
+}
+```
+
+This `calc()` function might not work as expected if the parent element does not have a defined width.  Some browsers may interpret `100%` relative to the viewport, while others may use the parent's content width or even the nearest ancestor with a defined width.
