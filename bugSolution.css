@@ -1,0 +1,15 @@
+To fix this issue, ensure that the parent element has a defined width. This removes ambiguity and provides a consistent baseline for the `calc()` function to work correctly.
+
+Here's an example:
+
+```css
+.parent {
+  width: 500px; /* Or any other defined width */
+}
+
+div {
+  width: calc(100% - 20px);
+}
+```
+
+By setting the width of the parent container (`.parent` in this case), the `calc()` function will now reliably calculate the width of the child `div` element relative to the parent's defined width.
